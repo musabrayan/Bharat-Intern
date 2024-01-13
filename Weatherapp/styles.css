@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Salsa&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
+}
+body{
+    background: linear-gradient(to left,#614385 , #516395);
+}
+
+.container{
+    background: linear-gradient( #c33764,#1d2671);
+    color: #1e1e1e;
+    padding: 2rem;
+    width:50%;
+    margin: 4rem auto;
+    border-radius: 10px;
+}
+
+.weather_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+input{
+    border: none;
+    background: linear-gradient(#ee9ca7,#ffdde1);
+    outline: none;
+    color: #1e1e1e;
+    font-weight: 600;
+    padding: 0.5rem 2.5rem;
+    border-radius: 5px;
+}
+input::placeholder{
+    color: #1e1e1e;
+    font-weight: 600;
+    font-size: 16px;
+}
+.weather_search{
+    position: relative;
+}
+.weather_search i {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    font-size: 20px;
+    color: #1e1e1e;
+}
+.weather_units{
+    font-size: 1.5rem;
+}
+.weather_units span{
+    cursor: pointer;
+}
+.weather_units span:first-child{
+    margin-right: 0.5rem;
+}
+.weather_body{
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: 600;
+}
+.weather_datetime{
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+.weather_forecast{
+    background: linear-gradient(#ee9ca7,#ffdde1);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    color: #1e1e1e;
+    font-weight: 600;
+}
+.weather_icon img{
+    width: 100px;
+    filter: invert(50%);
+}
+.weather_temperature{
+    font-size: 1.75rem;
+}
+.weather_minmax{
+    display: flex;
+    justify-content: center;
+}
+.weather_minmax p{
+    font-size: 14px;
+    margin-right: 0.5rem;
+}
+
+.weather_info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+.weather_card{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#ee9ca7,#ffdde1);
+    padding: 1rem;
+    border-radius: 10px;
+    color: #1e1e1e;
+    font-weight: 700;
+}
+.weather_card i{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.weather_card p{
+    font-size: 14px;
+}
+
+@media(max-width:936px){
+    .container{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .weather_header{
+        flex-direction: column;
+    }
+    .weather_units{
+        margin-top: 1rem;;
+    }
+    .container{
+        margin-top: 50px;
+    }
+}
+@media(max-width:400px){
+    .weather_info{
+        grid-template-columns: none;
+    }
+    
+}
